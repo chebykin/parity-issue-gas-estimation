@@ -1,0 +1,27 @@
+[parity]
+chain = "./chain.json"
+
+[rpc]
+interface = "0.0.0.0"
+cors = ["all"]
+hosts = ["all"]
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+
+[websockets]
+interface = "0.0.0.0"
+hosts = ["all"]
+origins = ["all"]
+apis = ["web3", "eth", "net", "parity", "traces", "rpc", "personal", "parity_accounts", "signer", "parity_set"]
+
+[ipc]
+disable = false
+
+[mining]
+# New transactions will not cause a new pending block to be created. (default - own)
+reseal_on_txs = "all"
+# Prepare a block to seal even when there are no miners connected. (default - false)
+force_sealing = false
+
+[ui]
+interface = "0.0.0.0"
+force = true
